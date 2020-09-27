@@ -1,3 +1,7 @@
 from django.shortcuts import render
+from django.views.generic import ListView
+from .models import Comic
 
-# Create your views here.
+class VotingList(ListView):
+    template_name = 'list.html'
+    model = Comic
