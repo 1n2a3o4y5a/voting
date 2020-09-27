@@ -1,3 +1,22 @@
 from django.db import models
 
-# Create your models here.
+class Comic(models.Model):
+    title = models.CharField(max_length=100)
+    aouthor = models.CharField(max_length=100)
+    # image = models.ImageField(upload_to='images/')
+
+    def __str__(self):
+        return self.title
+
+class Character(models.Model):
+    comic_id = models.ForeignKey(Comic, on_delete=models.CASCADE)
+    name = models.CharField(max_length=100)
+    profile = models.TextField()
+    # image = models.ImageField(upload_to='images/')
+
+    def __str__(self):
+        return self.name
+
+class voting(models.Model):
+    name = models.ForeignKey(Character, on_delete=models.CASCADE)
+    point = models.IntegerField()
