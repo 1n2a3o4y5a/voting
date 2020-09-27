@@ -10,7 +10,7 @@ class Comic(models.Model):
         return self.title
 
 class Character(models.Model):
-    comic_id = models.ForeignKey(Comic, on_delete=models.CASCADE)
+    comic = models.ForeignKey(Comic, on_delete=models.CASCADE)
     name = models.CharField(max_length=100)
     profile = models.TextField()
     # image = models.ImageField(upload_to='images/')
