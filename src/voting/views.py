@@ -7,5 +7,5 @@ class VotingList(ListView):
     model = Comic
 
 class VotingDetail(DetailView):
-    template_name = 'rankig.html'
+    template_name = 'ranking.html'
     model = Comic

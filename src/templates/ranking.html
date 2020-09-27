@@ -1,4 +1,3 @@
-{% for item in object_list %}
-{{ item }}
-{% for chara in item.character_set.all %}
+{% for chara in object.character_set.all %}
+{{chara}}
 {% endfor %}
