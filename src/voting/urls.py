@@ -3,6 +3,6 @@ from .views import VotingList, VotingDetail
 
 
 urlpatterns = [
-    path('list/', VotingList.as_view()),
-    path('detail/<int:pk>', VotingDetail.as_view()),
+    path('list/', VotingList.as_view(), name='list'),
+    path('detail/<int:pk>/', VotingDetail.as_view(), name='detail'),
 ]
