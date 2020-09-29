@@ -2,5 +2,11 @@
 {% block content1 %}
 {% for chara in object.character_set.all %}
 <p>{{chara}}</p>
+
+{% for voting in chara.voting_set.all %}
+{{ voting.point }}
+{% endfor %}
+
+
 {% endfor %}
 {% endblock %}
