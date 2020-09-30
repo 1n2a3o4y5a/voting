@@ -18,7 +18,7 @@ class Character(models.Model):
 
     def __str__(self):
         return self.name
-
+        
 class Voting(models.Model):
     name = models.ForeignKey(Character, on_delete=models.CASCADE)
     point = models.IntegerField()

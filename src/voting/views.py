@@ -10,9 +10,5 @@ class VotingList(ListView):
 class VotingDetail(DetailView):
     template_name = 'ranking.html'
     model = Comic
-
-    def voting(self):
-        voting = model.object.character_set.all().orderby('point')
-
-        return voting
+    # queryset = Comic.objects.select_rerated()
 

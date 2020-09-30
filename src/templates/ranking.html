@@ -3,8 +3,8 @@
 {% for chara in object.character_set.all %}
 <p>{{chara}}</p>
 
-{% for voting in chara.voting_set.all %}
-{{ voting.point }}
+{% for voting in chara.voting %}
+<p>{{ voting }}</p>
 {% endfor %}
 
 
