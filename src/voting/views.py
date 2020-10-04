@@ -9,13 +9,10 @@ class VotingList(ListView):
 
 class VotingDetail(DetailView):
     template_name = 'ranking.html'
-    model = Comic
+    # model = Comic
     # queryset = Voting.objects.filter(name_id__comic__id=1).all()
 
-    # def get_context_data(self, **kwargs):
-    #     context = super().get_context_data(**kwargs)
-
-    #     context["object_list"] = Comic.objects.all()
-
-    #     return context
+    def get_queryset(self):
+        qs = Voting.objects.filter().order_by('-point')
+        return qs
 
