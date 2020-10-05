@@ -14,7 +14,6 @@ class VotingDetail(DetailView):
     def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)
         context["voting"] = Voting.objects.filter(name_id__comic_id__id=self.kwargs['pk']).order_by('-point')
-        # do something
         return context
 
 
