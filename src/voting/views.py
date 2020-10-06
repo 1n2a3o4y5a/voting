@@ -3,12 +3,12 @@ from django.views.generic import ListView, DetailView
 from .models import Comic, Character, Voting
 
 class VotingList(ListView):
-    template_name = 'list.html'
+    template_name = './voting/list.html'
     model = Comic
 
 
 class VotingDetail(DetailView):
-    template_name = 'ranking.html'
+    template_name = './voting/ranking.html'
     model = Comic
     
     def get_context_data(self, **kwargs):
