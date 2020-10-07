@@ -24,7 +24,10 @@
               <a class="nav-link" href="#">ホーム <span class="sr-only">(current)</span></a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#">マイページ</a>
+              <a class="nav-link" href="{% url 'signup' %}">サインアップ</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">サインイン</a>
             </li>
           </ul>
           <form class="form-inline my-2 my-lg-0">
@@ -33,9 +36,9 @@
           </form>
         </div>
       </nav>
-    {% endblock %}
+    {% endblock header %}
     {% block content1 %}
-    {% endblock %}
+    {% endblock content1 %}
 
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->

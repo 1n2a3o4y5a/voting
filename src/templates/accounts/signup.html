@@ -1,28 +1,13 @@
-<!doctype html>
-<html lang="ja" >
-  <head>
-    <title>フローティングラベルサンプル for Bootstrap · Bootstrap</title>
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
-    <link href="https://fonts.googleapis.com/css?family=Noto+Sans+JP&display=swap" rel="stylesheet">
-    <link href="floating-labels.css" rel="stylesheet">
-    <link href="../example.css" rel="stylesheet">
-  </head>
-  <body >
-    <a id="skippy" class="sr-only sr-only-focusable" href="#content">
-  <div class="container">
-    <span class="skiplink-text">Skip to main content</span>
-  </div>
-</a>
+{% extends 'accounts/base.html' %}
+{% load static %}
 
-    <form class="form-signin">
-  <div class="text-center mb-4">
-    <img class="mb-4" src="../../assets/brand/bootstrap-solid.svg" alt="" width="72" height="72">
-    <!-- <h1 class="h3 mb-3 font-weight-normal">Floating labels</h1> -->
-    <h1 class="h3 mb-3 font-weight-normal">フローティングラベル</h1>
-    <!-- <p>Build form controls with floating labels via the <code>:placeholder-shown</code> pseudo-element. <a href="https://caniuse.com/#feat=css-placeholder-shown">Works in latest Chrome, Safari, and Firefox.</a></p> -->
-    <p><code>:placeholder-shown</code> 疑似要素を使って, フローティングラベルのついたフォームを作成しましょう。<a href="https://caniuse.com/#feat=css-placeholder-shown">最新の Chrome, Safari, Firefox で動作します。</a></p>
-  </div>
+{% block customcss %}
+<link rel="stylesheet" type="text/css" href="{% static 'static.css' %}">
+{% endblock customcss %}
 
+
+{% block content1 %}
+<form class="form-signin">
   <div class="form-label-group">
     <input type="email" id="inputEmail" class="form-control" placeholder="Email address" required autofocus>
     <!-- <label for="inputEmail">Email address</label> -->
@@ -55,5 +40,4 @@
 <script src="/docs/4.5/assets/js/src/application.js"></script>
 <script src="/docs/4.5/assets/js/src/search.js"></script>
 <script src="/docs/4.5/assets/js/src/ie-emulation-modes-warning.js"></script>
-  </body>
-</html>
+{% endblock content1 %}
