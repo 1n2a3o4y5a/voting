@@ -7,7 +7,7 @@
 
 
 {% block content1 %}
-<form class="form-signin">
+<form class="form-signin">{% csrf_token %}
   <div class="form-label-group">
     <input type="email" id="inputEmail" class="form-control" placeholder="Email address" required autofocus>
     <!-- <label for="inputEmail">Email address</label> -->
@@ -20,14 +20,9 @@
     <label for="inputPassword">パスワード</label>
   </div>
 
-  <div class="checkbox mb-3">
-    <label>
-      <!-- <input type="checkbox" value="remember-me"> Remember me -->
-      <input type="checkbox" value="remember-me"> 保存する
-    </label>
-  </div>
+
   <!-- <button class="btn btn-lg btn-primary btn-block" type="submit">Sign in</button> -->
-  <button class="btn btn-lg btn-primary btn-block" type="submit">サインイン</button>
+  <button class="btn btn-lg btn-primary btn-block" type="submit">サインアップ</button>
   <p class="mt-5 mb-3 text-muted text-center">&copy; 2017-2018</p>
 </form>
 
