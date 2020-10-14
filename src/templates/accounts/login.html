@@ -9,19 +9,16 @@
 {% block content1 %}
 <form class="form-signin">{% csrf_token %}
   <div class="form-label-group">
-    <input type="email" id="inputEmail" class="form-control" placeholder="Email address" required autofocus>
-    <!-- <label for="inputEmail">Email address</label> -->
+    <input type="email" id="inputEmail" class="form-control" name="email" placeholder="Email address" required autofocus>
     <label for="inputEmail">メールアドレス</label>
   </div>
 
   <div class="form-label-group">
-    <input type="password" id="inputPassword" class="form-control" placeholder="Password" required>
-    <!-- <label for="inputPassword">Password</label> -->
+    <input type="password" id="inputPassword" class="form-control" name="password" placeholder="Password" required>
     <label for="inputPassword">パスワード</label>
   </div>
 
 
-  <!-- <button class="btn btn-lg btn-primary btn-block" type="submit">Sign in</button> -->
   <button class="btn btn-lg btn-primary btn-block" type="submit">サインイン</button>
   <p class="mt-5 mb-3 text-muted text-center">&copy; 2017-2018</p>
 </form>

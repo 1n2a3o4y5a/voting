@@ -1,15 +1,19 @@
 from django.views.generic import TemplateView, CreateView
-from .forms import SignUpForm
+from .forms import SignUpForm, LoginForm
 from django.urls import reverse_lazy
 from django.http import HttpResponseRedirect
 from django.contrib.auth import login
+from django.contrib.auth.views import (
+    LoginView, LogoutView
+)
 
 
 
 
 
-class LogInView(TemplateView):
-    template_name = "./accounts/login.html"
+class LogInView(LoginView):
+    form_class = LoginForm
+    template_name = './accounts/login.html'
 
 class SignUpView(CreateView):
     form_class = SignUpForm
