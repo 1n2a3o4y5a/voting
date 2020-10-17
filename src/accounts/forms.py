@@ -8,6 +8,7 @@ class SignupForm(UserCreationForm):
         fields = ('username', 'email', 'password1', 'password2')
 
 class LoginForm(AuthenticationForm):
-    class Meta:
-        model = User
-        fields = ('email', 'password')
+    def __init__(self, *args, **kw):
+        super().__init__(*args, **kw)
+        for field in self.fields.values():
+            field.widget.attrs['placeholder'] = field.label

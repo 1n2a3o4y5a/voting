@@ -9,16 +9,15 @@ from django.contrib.auth.views import LoginView, LogoutView
 
 
 
-class LoginView(LoginView):
+class Login(LoginView):
     form_class = LoginForm
     template_name = "./accounts/login.html"
     success_url = reverse_lazy('list')
 
 
 
-class LogoutView(LogoutView):
+class Logout(LogoutView):
     template_name = "./voting/list.html"
-    success_url = reverse_lazy('list')
 
 class SignupView(CreateView):
     form_class = SignupForm
