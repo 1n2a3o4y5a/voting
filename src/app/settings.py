@@ -23,7 +23,7 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SECRET_KEY = '00&do^-qopun$-m@dr7*gyou3td4^m!eup^lx9xuiq@0v@+&n!'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
 ALLOWED_HOSTS = ['localhost', '127.0.0.1']
 
@@ -128,6 +128,10 @@ STATIC_URL = '/static/'
 STATICFILES_DIRS = [
     os.path.join(BASE_DIR, 'static')
 ]
+
+LOGIN_URL = 'list' 
+LOGIN_REDIRECT_URL = 'list' 
+LOGOUT_REDIRECT_URL = 'list' 
 
 # LOGGING = {
 #     'version': 1,
