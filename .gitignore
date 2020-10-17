@@ -7,3 +7,5 @@ db.sqlite3
 media
 .DS_Store
 src/app/__pycache__/urls.cpython-38.pyc
+src/app/__pycache__/settings.cpython-38.pyc
+src/app/__pycache__/urls.cpython-38.pyc
