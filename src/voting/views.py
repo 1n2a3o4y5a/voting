@@ -3,12 +3,23 @@ from django.views.generic import ListView, DetailView, UpdateView
 from .models import Comic, Character, Voting
 from django.urls import reverse_lazy
 from django.contrib.auth.decorators import login_required
+from django.db.models import Q
 
 
 
 class VotingList(ListView):
     template_name = './voting/list.html'
     model = Comic
+
+    def get_queryset(self):
+        s_word = self.request.GET.get('search')
+ 
+        if s_word:
+            object_list = Comic.objects.filter(
+                Q(title__icontains=s_word))# | Q(author__icontains=s_word))
+        else:
+            object_list = Comic.objects.all()
+        return object_list
 
 
 class VotingDetail(DetailView):

@@ -1,7 +1,7 @@
 {% extends "voting/base.html" %}
 {% block content1 %}
+{% for item in object_list %}
 <div class="container">
-    {% for item in object_list %}
     <div class="row">
         <div class="col">
             <div class="card" style="width: 15rem;">
@@ -13,6 +13,6 @@
             </div>
         </div>
     </div>
-    {% endfor %}
 </div>
+{% endfor %}
 {% endblock %}
