@@ -1,8 +1,7 @@
-from django.views.generic import TemplateView, CreateView
+from django.views.generic import CreateView
 from .forms import SignupForm, LoginForm
 from django.urls import reverse_lazy
 from django.http import HttpResponseRedirect
-from django.contrib.auth import login
 from django.contrib.auth.views import LoginView, LogoutView
 
 
