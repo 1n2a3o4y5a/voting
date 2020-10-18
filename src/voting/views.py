@@ -16,7 +16,7 @@ class VotingList(ListView):
  
         if s_word:
             object_list = Comic.objects.filter(
-                Q(title__icontains=s_word))# | Q(author__icontains=s_word))
+                Q(title__icontains=s_word) | Q(author__icontains=s_word))
         else:
             object_list = Comic.objects.all()
         return object_list

@@ -4,7 +4,7 @@ from django.utils import timezone
 class Comic(models.Model):
     title = models.CharField(max_length=100)
     outline = models.TextField(null=True)
-    aouthor = models.CharField(max_length=100)
+    author = models.CharField(max_length=100)
     # image = models.ImageField(upload_to='images/')
 
     def __str__(self):
