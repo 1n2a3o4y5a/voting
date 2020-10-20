@@ -1,11 +1,14 @@
 {% extends "voting/base.html" %}
+{% load static %}
+{% block customcss %}
+<link rel="stylesheet" type="text/css" href="{% static 'ranking.css' %}">
+{% endblock customcss %}
 {% block content1 %}
 {% for i in voting %}
-
 <div class="container">
   <div class="shadow">
   <ul class="list-unstyled">
-      <li class="media">
+      <li class="media row-20">
         <svg class="bd-placeholder-img mr-3" width="80" height="80" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice" focusable="false" role="img" aria-label="Placeholder: 64x64"><title>Placeholder</title><rect width="100%" height="100%" fill="#868e96"/><text x="50%" y="50%" fill="#dee2e6" dy=".3em">64x64</text></svg>
         <div class="media-body">
           <h4 class="mt-0 mb-1">{{i.name}}</h5>
@@ -20,4 +23,4 @@
 </div>
 
 {% endfor %}
-{% endblock %}
+{% endblock content1 %}

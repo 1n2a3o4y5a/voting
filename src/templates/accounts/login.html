@@ -7,6 +7,8 @@
 
 
 {% block content1 %}
+<div class="container">
+<div class="col">
 <form class="form-signin" method="post">{% csrf_token %}
   <div class="form-label-group">
     <input type="text" id="inputUserName" class="form-control" name="username" placeholder="username" required autofocus>
@@ -18,8 +20,19 @@
     <label for="inputPassword">パスワード</label>
   </div>
 
-
   <button class="btn btn-lg btn-primary btn-block" type="submit">ログイン</button>
-  <p class="mt-5 mb-3 text-muted text-center">&copy; 2017-2018</p>
+  
+  
 </form>
+
+<form class="form-signin" action="" method="post">{% csrf_token %}
+  <div class="form-label-group">
+    <input type="hidden" name="username" value="admin">
+    <input type="hidden" name="password" value="papipurio3329">
+    <button class="btn btn-lg btn-primary btn-block" type="submit">テストユーザーとしてログイン</button>
+    <p class="mt-5 mb-3 text-muted text-center">&copy; 2017-2018</p>
+  </div>
+</form>
+</div>
+</div>
 {% endblock content1 %}
